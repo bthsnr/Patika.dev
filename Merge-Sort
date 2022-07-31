@@ -1,0 +1,32 @@
+[16,21,11,8,12,22] -> Insertion Sort
+1.Yukarıda verilen dizinin sort türüne göre aşamalarını yazınız.
+[16,21,11,8,12,22] -- (n)
+açıklama:
+Yukarıdaki sayı dizisi, bize verilen dizidir.Verilen bu dizinin en küçük elemanı 8'dir.Bizim amacımız en küçük elemanı en başa getirmektir.Bu nedenle,mevcut ilk eleman ile en küçük elemanı yer değiştirmemiz gerekmektedir.
+
+8 elemanı,dizinin en başına yazılır ve 16 elemanı da,16 elemanının eski yerine yerleştirilir,yani elemanlar yer değiştirirler.Böylece 1.adım tamamlanmış olur.
+
+1.ADIM:
+[8,21,11,16,12,22] -- (n-1)
+
+açıklama:
+Daha sonra ise,ilk eleman(8) sabit tutulur ve 2.elemanın en küçük olacağı,diziyi büyükten küçüğe sıralayabileceğimiz diğer eleman aranır. [21,11,16,12,22] dizisindeki en küçük eleman 11 olduğu için,11 elemanı 2.eleman olarak seçilir ve mevcut 2.eleman ile (21), 11 elemanı yer değiştirir. 2.adım da bu şekilde tamamlanır.
+
+2.ADIM:
+[8,11,21,16,12,22] -- (n-2)
+
+açıklama:
+Aynı yol ile,dizideki elemanlar soldan sağa,büyükten küçüğe sıralanacak şekilde seçilmeye devam edilir.11'dan sonraki en büyük eleman 12 olduğundan, sıralamayı düzeltmek için 2.adımdaki 12 ile 21 yer değiştirir.Böylece 3.adım tamamlanmış olur.
+
+3.ADIM:
+[8,11,12,16,21,22] -- (n-3)
+
+not: dizinin son hali,zaten büyükten küçüğe sıralı olduğu için;yeni bir işleme ihtiyaç duyulmaz ve sorting tamamlanmış olur.
+
+dizinin son durumu: [8,11,12,16,21,22]
+2.Big-O gösterimini yazınız.
+O(n^2)'dir.
+açıklama:
+n + (n-1) + (n-2) + (n-3) + ... + 1 (Ardışık sayıların toplamı formülü) ve n.(n+1)/2 => n^2+n /2 'dir.
+Big-O'da domine eden fonksiyon alınır,burada n^2 domine eden fonksiyon olduğu için,cevap O(n^2)'dir.
+www.patika.dev
